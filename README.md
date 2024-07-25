@@ -1,7 +1,6 @@
 - 👋 Hi, I’m Chance
 - 👀 I’m interested in Fighting games, card games and character design!
-- 🌱 I’m currently learning time management 🙃
-- 💞️ I’m looking to collaborate on ...
+- 🌱 I’m currently learning too many things 🙃
 - 📫 How to reach me ... chancemccray@gmail.com
 
 <!---
