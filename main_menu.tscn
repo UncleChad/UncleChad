@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx5dbg3uedoax"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ce1c5"]
+[ext_resource type="Texture2D" uid="uid://b51hxrade7viy" path="res://resources/gameplaceholder.png" id="2_t0bqy"]
+[ext_resource type="Texture2D" uid="uid://bdwcifgin3hb3" path="res://resources/continue.png" id="3_pqpxe"]
+[ext_resource type="Texture2D" uid="uid://gkia2l51clc2" path="res://resources/play.png" id="4_du7ba"]
+[ext_resource type="Texture2D" uid="uid://7gflp17gs7xl" path="res://resources/quit.png" id="5_wgojs"]
+
+[node name="main_menu" type="Node2D"]
+position = Vector2(83, 75)
+script = ExtResource("1_ce1c5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 155.0
+offset_top = 48.0
+offset_right = 884.355
+offset_bottom = 128.0
+
+[node name="Game Name" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_t0bqy")
+expand_mode = 3
+
+[node name="Continue" type="TextureRect" parent="MarginContainer/Game Name"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.678
+offset_top = 184.0
+offset_right = 124.137
+offset_bottom = 232.0
+grow_horizontal = 2
+texture = ExtResource("3_pqpxe")
+expand_mode = 3
+
+[node name="Play" type="TextureRect" parent="MarginContainer/Game Name"]
+visible = false
+offset_left = 220.0
+offset_top = 282.0
+offset_right = 323.0
+offset_bottom = 328.0
+texture = ExtResource("4_du7ba")
+expand_mode = 1
+
+[node name="Quit" type="TextureRect" parent="MarginContainer/Game Name/Play"]
+offset_top = 115.0
+offset_right = 116.0
+offset_bottom = 161.0
+texture = ExtResource("5_wgojs")
+expand_mode = 1
+
+[node name="Play" type="Button" parent="."]
+offset_left = 375.0
+offset_top = 299.0
+offset_right = 515.0
+offset_bottom = 389.0
+icon = ExtResource("4_du7ba")
+flat = true
+expand_icon = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 375.0
+offset_top = 389.0
+offset_right = 495.0
+offset_bottom = 469.0
+icon = ExtResource("5_wgojs")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
